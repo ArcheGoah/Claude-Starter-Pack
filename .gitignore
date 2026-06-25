@@ -1,0 +1,68 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+config/cookies.txt
+config/notion.json
+config/secrets.json
+
+# Node
+node_modules/
+.next/
+.nuxt/
+dist/
+build/
+.cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Claude Flow / Memory
+.claude-flow/
+.swarm/
+*.memory.db
+.claude/cache/
+
+# Memory (persoenlich - nicht in shared repos)
+memory/
+!memory/MEMORY.md
+!memory/.gitkeep
+
+# Backups
+*.bak
+*.backup
+*.old
+
+# Generated
+coverage/
+.nyc_output/
+
+# Tools (gecloned)
+tools/blend-ai/
+tools/adb-mcp/
+tools/after-effects-mcp/
+tools/LightRAG/
+tools/RAG-Anything/

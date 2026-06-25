@@ -1,0 +1,75 @@
+{
+  "_comment": "MCP Server Configuration. Pfade mit {DEIN_USER} musst du anpassen. Manche brauchen Tools die installiert sein muessen - siehe 01-SETUP-GUIDE.md",
+  "mcpServers": {
+    "playwright": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@playwright/mcp@latest"],
+      "toolTimeout": 120
+    },
+    "context7": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@upstash/context7-mcp@latest"],
+      "toolTimeout": 60
+    },
+    "chrome-devtools": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "chrome-devtools-mcp@latest"],
+      "toolTimeout": 120
+    },
+    "vercel": {
+      "type": "sse",
+      "url": "https://mcp.vercel.com/sse"
+    },
+    "_optional_blender": {
+      "_NOTE": "Aktivieren wenn du Blender nutzt - braucht uvx + Blender Addon",
+      "command": "C:\\Users\\{DEIN_USER}\\.local\\bin\\uvx.exe",
+      "args": ["blender-mcp"],
+      "toolTimeout": 300
+    },
+    "_optional_notion": {
+      "_NOTE": "Aktivieren wenn du Notion nutzt - braucht NOTION_TOKEN in .env",
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@notionhq/notion-mcp-server"],
+      "env": {
+        "OPENAPI_MCP_HEADERS": "{\"Authorization\":\"Bearer ${NOTION_TOKEN}\",\"Notion-Version\":\"2022-06-28\"}"
+      },
+      "toolTimeout": 120
+    },
+    "_optional_firecrawl": {
+      "_NOTE": "Aktivieren fuer Web-Scraping - braucht FIRECRAWL_API_KEY in .env",
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}"
+      },
+      "toolTimeout": 120
+    },
+    "_optional_after_effects": {
+      "_NOTE": "Aktivieren wenn du AE nutzt - braucht TheLlamainator/after-effects-mcp gecloned in tools/",
+      "command": "node",
+      "args": [
+        "C:\\Users\\{DEIN_USER}\\Desktop\\{DEIN_PROJEKT}\\tools\\after-effects-mcp\\build\\index.js"
+      ],
+      "toolTimeout": 180
+    },
+    "_optional_adobe_apps": {
+      "_NOTE": "Aktivieren fuer Premiere/Photoshop/InDesign - braucht adb-mcp gecloned in tools/",
+      "_install": "git clone https://github.com/CesarCetina/adb-mcp tools/adb-mcp",
+      "command": "C:\\Users\\{DEIN_USER}\\.local\\bin\\uv.exe",
+      "args": [
+        "run",
+        "--directory",
+        "C:\\Users\\{DEIN_USER}\\Desktop\\{DEIN_PROJEKT}\\tools\\adb-mcp\\mcp",
+        "--with", "fonttools",
+        "--with", "python-socketio",
+        "--with", "mcp",
+        "--with", "requests",
+        "--with", "websocket-client",
+        "--with", "pillow",
+        "python",
+        "pr-mcp.py"
+      ],
+      "toolTimeout": 180
+    }
+  }
+}

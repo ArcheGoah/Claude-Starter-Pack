@@ -1,0 +1,32 @@
+{
+  "source": "example/interview.mp4",
+  "target_duration": 30.0,
+  "mode": "highlight",
+  "cuts": [
+    {
+      "start": 12.3,
+      "end": 18.9,
+      "reason": "Hook: 'Was ich an Kunst am meisten hasse...'",
+      "label": "hook",
+      "fade_in_ms": 0,
+      "fade_out_ms": 120
+    },
+    {
+      "start": 47.2,
+      "end": 63.5,
+      "reason": "Main story: Project-Skulptur first idea moment",
+      "label": "story"
+    },
+    {
+      "start": 118.7,
+      "end": 128.1,
+      "reason": "CTA: 'komm zum Festival'",
+      "label": "cta"
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-04-19T15:30:00Z",
+    "generator": "claude-opus-4-7",
+    "transcript_source": "example/interview.transcript.json"
+  }
+}
