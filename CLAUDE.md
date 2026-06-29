@@ -115,8 +115,7 @@ Regeln, Datei-Konventionen, Tool-Pfade: `.claude/rules/arbeitsregeln.md`
 - Claude API / Anthropic SDK -> `claude-api`
 - Browser Automation -> `playwright-skill`
 - Codex Review (cheaper than Opus) -> `codex-review`
-- Pair Programming / TDD -> `test-driven-development` + `pair-programming`
-- SPARC Methodology -> `sparc-methodology`
+- Pair Programming / TDD -> `test-driven-development`
 
 ### Web & Marketing
 - **Web-Edit/Website -> `design-md-generator` (PFLICHT vor Edits an Websites)**

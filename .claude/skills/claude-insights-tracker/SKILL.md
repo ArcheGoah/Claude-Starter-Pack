@@ -26,7 +26,6 @@ Self-Analysis fuer Claude Code Sessions. Inspiriert von `/insights` Command aus 
 ### Step 1: Session-Daten lesen
 - `git log --oneline --since="X hours ago"`
 - Aktuelle Conversation
-- `.claude-flow/metrics/swarm-activity.json`
 - Memory-Files Updates
 
 ### Step 2: Pattern-Detection

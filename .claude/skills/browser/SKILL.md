@@ -1,6 +1,6 @@
 ---
 name: browser
-description: Web browser automation with AI-optimized snapshots for claude-flow agents
+description: Web browser automation with AI-optimized snapshots for agents
 version: 1.0.0
 triggers:
   - /browser
@@ -154,7 +154,7 @@ agent-browser get text @e2  # Price
 agent-browser get attr @e3 href  # Link
 ```
 
-### Multi-Session (Swarm)
+### Multi-Session (Parallel)
 ```bash
 # Session 1: Navigator
 agent-browser --session nav open https://example.com
@@ -166,9 +166,8 @@ agent-browser --session scrape open https://example.com/data
 agent-browser --session scrape snapshot -i
 ```
 
-## Integration with Claude Flow
+## MCP Tools
 
-### MCP Tools
 All browser operations are available as MCP tools with `browser/` prefix:
 - `browser/open`
 - `browser/snapshot`
@@ -176,24 +175,6 @@ All browser operations are available as MCP tools with `browser/` prefix:
 - `browser/fill`
 - `browser/screenshot`
 - etc.
-
-### Memory Integration
-```bash
-# Store successful patterns
-npx @claude-flow/cli memory store --namespace browser-patterns --key "login-flow" --value "snapshot->fill->click->wait"
-
-# Retrieve before similar task
-npx @claude-flow/cli memory search --query "login automation"
-```
-
-### Hooks
-```bash
-# Pre-browse hook (get context)
-npx @claude-flow/cli hooks pre-edit --file "browser-task.ts"
-
-# Post-browse hook (record success)
-npx @claude-flow/cli hooks post-task --task-id "browse-1" --success true
-```
 
 ## Tips
 

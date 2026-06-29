@@ -9,8 +9,8 @@ const { execSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..', '..');
 const HANDOFF = path.join(ROOT, '.claude', 'HANDOFF.md');
-const SESSION_FILE = path.join(ROOT, '.claude-flow', 'sessions', 'current.json');
-const PENDING = path.join(ROOT, '.claude-flow', 'data', 'pending-insights.jsonl');
+const SESSION_FILE = path.join(ROOT, '.claude-state', 'sessions', 'current.json');
+const PENDING = path.join(ROOT, '.claude-state', 'data', 'pending-insights.jsonl');
 
 function exec(cmd) {
   try { return execSync(cmd, { cwd: ROOT, encoding: 'utf-8', timeout: 5000, windowsHide: true }).trim(); }

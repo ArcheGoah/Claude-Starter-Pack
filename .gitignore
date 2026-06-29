@@ -40,9 +40,9 @@ desktop.ini
 .idea/
 *.iml
 
-# Claude Flow / Memory
-.claude-flow/
-.swarm/
+# Claude state / Memory
+.claude-state/
+.claude/HANDOFF.md
 *.memory.db
 .claude/cache/
 

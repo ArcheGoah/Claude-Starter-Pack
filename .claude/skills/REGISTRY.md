@@ -1,9 +1,9 @@
 # Skill Registry
 
-**Total skills:** 134 (lokal) + 8 Custom Artist Agents + 161 OpenSpace Cloud
+**Total skills:** 108 (lokal) + 8 Custom Artist Agents + 161 OpenSpace Cloud
 **Generated:** 2026-03-28
-**Updated:** 2026-05-21 — Cleanup: removed n8n-* (7), obsidian-* (3), solana-dev, make-discoball, ch-dsg-compliance-check
-**Previous:** 2026-05-15 — Added TouchDesigner 2025 skill
+**Updated:** 2026-06-29 — Cleanup: removed 12 legacy multi-agent orchestration skills (external-framework-dependent)
+**Previous:** 2026-05-21 — Cleanup: removed n8n-* (7), obsidian-* (3), solana-dev, make-discoball, ch-dsg-compliance-check
 
 ## TouchDesigner 2025 (1) — NEW 2026-05-15
 
@@ -146,16 +146,13 @@ The description field is what Claude uses for semantic matching -- make it speci
 |-------|------|----------|-------------|
 | code-garden | .claude/skills/code-garden/ | algorithmic art system, generative art, generative kunst, code garden, hardware art, autonome kunst | Generative art system using hardware metrics and algorithmic processes as creative inputs - autonomous art creation |
 | executing-plans | .claude/skills/executing-plans/ | executing plans | Use when you have a written implementation plan to execute in a separate session with review checkpoints |
-| pair-programming | .claude/skills/pair-programming/ | pair programming | AI-assisted pair programming with multiple modes (driver/navigator/switch), real-time verification, quality monitoring, and comprehensive... |
 | receiving-code-review | .claude/skills/receiving-code-review/ | receiving code review | Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionabl... |
 | requesting-code-review | .claude/skills/requesting-code-review/ | requesting code review | Use when completing tasks, implementing major features, or before merging to verify work meets requirements |
-| sparc-methodology | .claude/skills/sparc-methodology/ | sparc methodology | SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) comprehensive development methodology with multi-agent orchestration |
 | spec-to-implementation | .claude/skills/spec-to-implementation/ | spec to implementation | Parse specifications and create implementation plans with task tracking in Notion |
 | subagent-driven-development | .claude/skills/subagent-driven-development/ | subagent driven development | Use when executing implementation plans with independent tasks in the current session |
 | systematic-debugging | .claude/skills/systematic-debugging/ | systematic debugging | Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes |
 | test-driven-development | .claude/skills/test-driven-development/ | test driven development | Use when implementing any feature or bugfix, before writing implementation code |
 | verification-before-completion | .claude/skills/verification-before-completion/ | verification before completion | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands a... |
-| verification-quality | .claude/skills/verification-quality/ | verification quality | Comprehensive truth scoring, code quality verification, and automatic rollback system with 0.95 accuracy threshold for ensuring high-qual... |
 | writing-plans | .claude/skills/writing-plans/ | writing plans | Use when you have a spec or requirements for a multi-step task, before touching code |
 
 ### GitHub & DevOps (8)
@@ -163,12 +160,6 @@ The description field is what Claude uses for semantic matching -- make it speci
 | Skill | Path | Triggers | Description |
 |-------|------|----------|-------------|
 | finishing-a-development-branch | .claude/skills/finishing-a-development-branch/ | finishing a development branch | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development ... |
-| github-code-review | .claude/skills/github-code-review/ | github code review | Comprehensive GitHub code review with AI-powered swarm coordination |
-| github-multi-repo | .claude/skills/github-multi-repo/ | github multi repo | Multi-repository coordination, synchronization, and architecture management with AI swarm orchestration |
-| github-project-management | .claude/skills/github-project-management/ | github project management | Comprehensive GitHub project management with swarm-coordinated issue tracking, project board automation, and sprint planning |
-| github-release-management | .claude/skills/github-release-management/ | github release management | Comprehensive GitHub release orchestration with AI swarm coordination for automated versioning, testing, deployment, and rollback management |
-| github-workflow-automation | .claude/skills/github-workflow-automation/ | github workflow automation | Advanced GitHub Actions workflow automation with AI swarm coordination, intelligent CI/CD pipelines, and comprehensive repository management |
-| hooks-automation | .claude/skills/hooks-automation/ | hooks automation | Automated coordination, formatting, and learning from Claude Code operations using intelligent hooks with MCP integration. Includes pre/p... |
 | using-git-worktrees | .claude/skills/using-git-worktrees/ | using git worktrees | Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated gi... |
 
 ### Design & Creative (5)
@@ -203,7 +194,7 @@ The description field is what Claude uses for semantic matching -- make it speci
 | Skill | Path | Triggers | Description |
 |-------|------|----------|-------------|
 | brainstorming | .claude/skills/brainstorming/ | brainstorming | You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explore... |
-| browser | .claude/skills/browser/ | /browser, browse, screenshot, navigate, browser, scrape | Web browser automation with AI-optimized snapshots for claude-flow agents |
+| browser | .claude/skills/browser/ | /browser, browse, screenshot, navigate, browser, scrape | Web browser automation with AI-optimized snapshots |
 | delegate-task | .claude/skills/delegate-task/ | delegate task | Delegate tasks to OpenSpace — a full-stack autonomous worker for coding, DevOps, web research, and desktop automation, backed by an exten... |
 | dispatching-parallel-agents | .claude/skills/dispatching-parallel-agents/ | dispatching parallel agents | Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies |
 | firecrawl-web | .claude/skills/firecrawl-web/ | firecrawl web | Fetch web content, take screenshots, extract structured data, search the web, and crawl documentation sites. Use when the user needs curr... |
@@ -214,9 +205,6 @@ The description field is what Claude uses for semantic matching -- make it speci
 | research-documentation | .claude/skills/research-documentation/ | research documentation | Research topics and document findings in Notion with organized structure and sources |
 | skill-builder | .claude/skills/skill-builder/ | skill builder | Create new Claude Code Skills with proper YAML frontmatter, progressive disclosure structure, and complete directory organization. Use wh... |
 | skill-discovery | .claude/skills/skill-discovery/ | skill discovery | Search for reusable skills across OpenSpace's local registry and cloud community. Reusing proven skills saves tokens, improves reliabilit... |
-| stream-chain | .claude/skills/stream-chain/ | stream chain | Stream-JSON chaining for multi-agent pipelines, data transformation, and sequential workflows |
-| swarm-advanced | .claude/skills/swarm-advanced/ | swarm advanced | Advanced swarm orchestration patterns for research, development, testing, and complex distributed workflows |
-| swarm-orchestration | .claude/skills/swarm-orchestration/ | swarm orchestration | Orchestrate multi-agent swarms with agentic-flow for parallel task execution, dynamic topology, and intelligent coordination. Use when sc... |
 | using-superpowers | .claude/skills/using-superpowers/ | using superpowers | Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response includin... |
 | writing-skills | .claude/skills/writing-skills/ | writing skills | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
 

@@ -6,7 +6,7 @@ triggers:
   - ultraplan
   - sub-agents recherche
   - multi-research
-  - research swarm
+  - parallele sub-agents research
   - parallel agents research
 ---
 
@@ -68,7 +68,6 @@ Bei neuen Tools/Personen → Notion DB. Bei Patterns → Memory-File.
 
 ## Verwandte Skills
 - `dispatching-parallel-agents`
-- `swarm-orchestration`
 - `research-documentation`
 
 ## Reference

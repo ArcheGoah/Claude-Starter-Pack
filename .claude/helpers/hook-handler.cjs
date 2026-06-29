@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Claude Flow Hook Handler (Cross-Platform)
+ * Hook Handler (Cross-Platform)
  * Dispatches hook events to the appropriate helper modules.
  */
 
@@ -185,7 +185,6 @@ const handlers = {
     console.log('PreCompact Guidance:');
     console.log('IMPORTANT: Review CLAUDE.md in project root for:');
     console.log('   - Available agents and concurrent usage patterns');
-    console.log('   - Swarm coordination strategies (hierarchical, mesh, adaptive)');
     console.log('   - Critical concurrent execution rules (1 MESSAGE = ALL OPERATIONS)');
     console.log('Ready for compact operation');
   },
@@ -195,7 +194,6 @@ const handlers = {
     console.log('CRITICAL: Before compacting, ensure you understand:');
     console.log('   - All agents available in .claude/agents/ directory');
     console.log('   - Concurrent execution patterns from CLAUDE.md');
-    console.log('   - Swarm coordination strategies for complex tasks');
     console.log('Apply GOLDEN RULE: Always batch operations in single messages');
     console.log('Auto-compact proceeding with full agent context');
   },

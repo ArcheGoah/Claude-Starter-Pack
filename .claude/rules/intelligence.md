@@ -6,7 +6,7 @@ Bei Session-Start automatisch diese Checks durchfuehren:
 
 1. **Deadlines pruefen** - `docs/business/deadlines.md` lesen falls vorhanden. Alles unter 14 Tagen sofort melden.
 2. **Letzter git log** - `git log --oneline -10` checken. Was wurde zuletzt gemacht? Daran ankuepfen.
-3. **Memory laden** - claude-flow `memory_search` mit aktuellem Fokus.
+3. **Memory laden** - `memory/MEMORY.md` lesen, relevante Eintraege zum aktuellen Fokus heraussuchen.
 4. **Notion Tasks** - Wenn Aufgaben-DB Eintraege hat, offene Tasks pruefen.
 5. **Muell-Check** - Root-Verzeichnis scannen auf Dateien die da nicht hingehoeren.
 
@@ -14,7 +14,7 @@ Bei Session-Start automatisch diese Checks durchfuehren:
 
 Vor Session-Ende automatisch via `claude-insights-tracker` Skill:
 
-1. **Was wurde gemacht** - Zusammenfassung in claude-flow `memory_store` speichern
+1. **Was wurde gemacht** - Zusammenfassung als Memory-File in `memory/` ablegen
 2. **Neue Erkenntnisse** - Wenn User was Neues erwaehnt hat -> Memory-File erstellen/updaten
 3. **Skill-Feedback** - Welche Skills haben gefeuert? Welche Kombis gut funktioniert? -> Pattern speichern
 4. **Offene Todos** - Unerledigte Arbeit in Memory speichern fuer naechste Session
@@ -24,7 +24,7 @@ Vor Session-Ende automatisch via `claude-insights-tracker` Skill:
 
 1. **Jede neue Datei** -> Sofort in den richtigen Ordner (siehe CLAUDE.md Ordner-Regeln)
 2. **Jeder neue Kontakt/Galerie/Festival** -> Notion DB updaten (falls vorhanden)
-3. **Jede neue Erkenntnis** -> Memory speichern (claude-flow + File-Memory)
+3. **Jede neue Erkenntnis** -> Memory speichern (File-Memory in `memory/`)
 4. **Jede Code-Aenderung** -> Skill `verification-before-completion` automatisch
 5. **Jede visuelle Aenderung** -> Screenshot mit Playwright
 6. **Jedes neue Video** -> Report in `video-imports/` nach Schema

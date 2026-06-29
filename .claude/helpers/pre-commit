@@ -1,19 +1,18 @@
 #!/bin/bash
-# Claude Flow Pre-Commit Hook
+# Pre-Commit Hook
 # Validates code quality before commit
 
 set -e
 
-echo "🔍 Running Claude Flow pre-commit checks..."
+echo "🔍 Running pre-commit checks..."
 
 # Get staged files
 STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
 
-# Run validation for each staged file
+# Report each staged source file
 for FILE in $STAGED_FILES; do
   if [[ "$FILE" =~ \.(ts|js|tsx|jsx)$ ]]; then
     echo "  Validating: $FILE"
-    npx @claude-flow/cli hooks pre-edit --file "$FILE" --validate-syntax 2>/dev/null || true
   fi
 done
 

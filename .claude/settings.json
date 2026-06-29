@@ -88,11 +88,6 @@
             "type": "command",
             "command": "cmd /c node %CLAUDE_PROJECT_DIR%/.claude/helpers/handoff-loader.cjs",
             "timeout": 5000
-          },
-          {
-            "type": "command",
-            "command": "cmd /c node %CLAUDE_PROJECT_DIR%/.claude/helpers/auto-memory-hook.mjs import",
-            "timeout": 8000
           }
         ]
       }
@@ -124,11 +119,6 @@
           {
             "type": "command",
             "command": "cmd /c node %CLAUDE_PROJECT_DIR%/.claude/helpers/handoff-generator.cjs",
-            "timeout": 10000
-          },
-          {
-            "type": "command",
-            "command": "cmd /c node %CLAUDE_PROJECT_DIR%/.claude/helpers/auto-memory-hook.mjs sync",
             "timeout": 10000
           }
         ]
@@ -211,10 +201,7 @@
   },
   "permissions": {
     "allow": [
-      "Bash(npx @claude-flow*)",
-      "Bash(npx claude-flow*)",
-      "Bash(node .claude/*)",
-      "mcp__claude-flow__:*"
+      "Bash(node .claude/*)"
     ],
     "deny": [
       "Read(./.env)",
@@ -222,52 +209,6 @@
     ]
   },
   "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
-    "CLAUDE_FLOW_V3_ENABLED": "true",
-    "CLAUDE_FLOW_HOOKS_ENABLED": "true"
-  },
-  "claudeFlow": {
-    "version": "3.0.0",
-    "enabled": true,
-    "platform": {
-      "os": "windows",
-      "arch": "x64",
-      "shell": "powershell"
-    },
-    "modelPreferences": {
-      "default": "claude-opus-4-7",
-      "routing": "claude-haiku-4-5-20251001"
-    },
-    "agentTeams": {
-      "enabled": true,
-      "teammateMode": "auto",
-      "taskListEnabled": true,
-      "mailboxEnabled": true
-    },
-    "swarm": {
-      "topology": "hierarchical-mesh",
-      "maxAgents": 15
-    },
-    "memory": {
-      "backend": "hybrid",
-      "enableHNSW": true
-    },
-    "neural": {
-      "enabled": true
-    },
-    "learning": {
-      "enabled": true,
-      "autoTrain": true,
-      "patterns": [
-        "coordination",
-        "optimization",
-        "prediction"
-      ]
-    },
-    "security": {
-      "autoScan": true,
-      "scanOnEdit": true,
-      "cveCheck": true
-    }
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   }
 }

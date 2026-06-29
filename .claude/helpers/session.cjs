@@ -12,18 +12,18 @@ const platform = os.platform();
 const homeDir = os.homedir();
 
 function getDataDir() {
-  const localDir = path.join(process.cwd(), '.claude-flow', 'sessions');
+  const localDir = path.join(process.cwd(), '.claude-state', 'sessions');
   if (fs.existsSync(path.dirname(localDir))) {
     return localDir;
   }
 
   switch (platform) {
     case 'win32':
-      return path.join(process.env.APPDATA || homeDir, 'claude-flow', 'sessions');
+      return path.join(process.env.APPDATA || homeDir, 'claude-state', 'sessions');
     case 'darwin':
-      return path.join(homeDir, 'Library', 'Application Support', 'claude-flow', 'sessions');
+      return path.join(homeDir, 'Library', 'Application Support', 'claude-state', 'sessions');
     default:
-      return path.join(homeDir, '.claude-flow', 'sessions');
+      return path.join(homeDir, '.claude-state', 'sessions');
   }
 }
 
