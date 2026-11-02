@@ -66,3 +66,7 @@ tools/adb-mcp/
 tools/after-effects-mcp/
 tools/LightRAG/
 tools/RAG-Anything/
+
+# Run leftovers of skills (they carry local paths and user names)
+.temp-execution-*
+**/.temp-execution-*
